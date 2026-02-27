@@ -114,7 +114,7 @@ function App() {
     updateCollection(id, { name });
   };
 
-  const handleSave = () => {
+  const handleExport = () => {
     downloadCollectionFile(activeCollection);
   };
 
@@ -146,7 +146,7 @@ function App() {
         <header className="p-4 border-b border-gray-800">
           <div className="flex items-center justify-between mb-3">
             <h1 className="text-xl font-bold">WebSocket Lab</h1>
-            <CollectionActions onSave={handleSave} onImport={handleImport} />
+            <CollectionActions onExport={handleExport} onImport={handleImport} />
           </div>
           <BaseUrlBar value={activeCollection.baseUrl} onChange={setBaseUrl} />
         </header>
