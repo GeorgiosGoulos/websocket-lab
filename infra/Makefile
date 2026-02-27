@@ -1,6 +1,6 @@
 .PHONY: build-frontend build-backend build \
        docker-frontend docker-backend docker \
-       all run stop
+       all run stop rebuild clean
 
 # Build (compile/bundle) targets
 build-frontend:
@@ -29,3 +29,11 @@ run:
 
 stop:
 	docker compose down
+
+# Rebuild images from scratch and start containers
+rebuild:
+	docker compose up -d --build
+
+# Remove containers and images
+clean:
+	docker compose down --rmi local

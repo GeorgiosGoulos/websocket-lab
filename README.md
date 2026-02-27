@@ -4,6 +4,8 @@ A WebSocket debugging and testing tool. Connect to any WebSocket endpoint, send 
 
 Comes with a built-in testing server that exposes WebSocket endpoints with configurable behaviors (echo, auth, delays, streaming, chat) so you can experiment without needing your own server.
 
+![WebSocket Lab — connected to the echo endpoint](docs/assets/screen1.png)
+
 ## Features
 
 **Frontend (web client)**
@@ -89,6 +91,8 @@ make docker            # build both Docker images
 make all               # build projects + Docker images
 make run               # docker-compose up
 make stop              # docker-compose down
+make rebuild           # rebuild images and restart
+make clean             # remove containers and images
 ```
 
 ## Tech Stack
